@@ -76,15 +76,19 @@ describe Venue do
       venue.add_patron("Bob")
       venue.add_patron("James")
       venue.add_patron("Cat")
+      venue.add_patron("Sue")
+      venue.add_patron("Tristan")
+      venue.add_patron("Phillip")
 
       puts venue.patrons
+      puts venue.patrons.length
       expect(venue.over_capacity?).to eq true
+
       venue.kick_out
       puts venue.patrons
+      puts venue.patrons.length
       expect(venue.over_capacity?).to eq false
-      # venue.kick_out
-      # venue.kick_out
-      # expect(venue.over_capacity?).to eq false
+
     end
   end
 end

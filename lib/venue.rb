@@ -27,7 +27,9 @@ class Venue
   end
 
   def kick_out
-      patrons.pop
+      while patrons.length > 4
+        patrons.pop #while patrons.length >4
+      end
       # until patrons.length
   end
 
