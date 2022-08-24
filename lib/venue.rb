@@ -1,5 +1,5 @@
 class Venue
-  attr_reader :name, :capacity
+  attr_reader :name, :capacity, :patrons  
 
   def initialize(name, capacity)
     @name = name
