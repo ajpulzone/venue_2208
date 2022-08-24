@@ -26,4 +26,9 @@ class Venue
     end
   end
 
+  def kick_out
+      patrons.pop
+      # until patrons.length
+  end
+
 end
