@@ -53,4 +53,19 @@ describe Venue do
       # require "pry";binding.pry
     end
   end
+
+  describe "#over_capacity" do
+    it "returns true if venue has more patrons than capacity" do
+      venue = Venue.new("Bluebird", 4)
+      venue.add_patron("Mike")
+      venue.add_patron("Megan")
+      venue.add_patron("Bob")
+      expect(venue.over_capacity?).to eq false
+
+      venue.add_patron("James")
+      venue.add_patron("Cat")
+      expect(venue.over_capacity?).to eq true
+
+    end
+  end
 end
